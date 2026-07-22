@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Quote | Minnekhada Facilities Consulting</title>
+  <meta name="description" content="Calculate an instant estimate and request a formal quote for janitorial, paving, duct cleaning, window cleaning, line painting, carpet care, or pressure washing in BC.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <div class="top-info-item"><i class="fa-solid fa-phone"></i> (604) 555-6466</div>
+        <div class="top-info-item"><i class="fa-solid fa-envelope"></i> info@minnekhada.ca</div>
+        <div class="top-info-item"><i class="fa-solid fa-clock"></i> Mon - Fri: 7:00 AM - 6:00 PM</div>
+      </div>
+      <div class="top-badge"><i class="fa-solid fa-bolt"></i> Instant Quote Calculator</div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon"><i class="fa-solid fa-city"></i></div>
+        <div class="brand-text">
+          <div class="brand-title">MINNEKHADA <span>FACILITIES</span></div>
+          <div class="brand-subtitle">CONSULTING & SERVICES</div>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="quote.html" class="nav-link active">Request Quote</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="quote.html" class="btn btn-primary btn-sm">Get Instant Quote</a>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <h1>Request a Custom Facility Quote</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <span>/</span> <span>Quote Request</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="quote-wrapper">
+
+        <div class="quote-steps-nav">
+          <div class="step-indicator active">
+            <div class="step-number">1</div>
+            <div class="step-label">Select Services</div>
+          </div>
+          <div class="step-indicator active">
+            <div class="step-number">2</div>
+            <div class="step-label">Site Details</div>
+          </div>
+          <div class="step-indicator active">
+            <div class="step-number">3</div>
+            <div class="step-label">Contact Info</div>
+          </div>
+        </div>
+
+        <div id="quoteSuccessMessage" style="display: none; background: #D1FAE5; border: 1px solid #10B981; color: #065F46; padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 2rem; text-align: center;">
+          <i class="fa-solid fa-circle-check" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+          <h3 style="color: #065F46; font-size: 1.5rem;">Quote Request Received!</h3>
+          <p style="margin-top: 0.5rem;">Thank you for choosing Minnekhada Facilities Consulting. A senior facility advisor will review your specifications and send an official detailed estimate within 2-4 business hours.</p>
+        </div>
+
+        <form id="interactiveQuoteForm">
+          <!-- Step 1: Services Selection -->
+          <div style="margin-bottom: 2.5rem;">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--primary);">Step 1: Choose Required Services</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">Click to select one or more of our 7 specialized facility trades:</p>
+
+            <div class="services-selection-grid">
+              <div class="service-select-card" data-service="Air Duct Cleaning" data-base-price="350">
+                <i class="fa-solid fa-wind"></i>
+                <h4>1. Duct Cleaning</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">HVAC Sanitization</span>
+              </div>
+
+              <div class="service-select-card" data-service="Janitorial Cleaning" data-base-price="300">
+                <i class="fa-solid fa-broom"></i>
+                <h4>2. Janitorial Care</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Commercial & Strata</span>
+              </div>
+
+              <div class="service-select-card" data-service="Window Cleaning" data-base-price="250">
+                <i class="fa-solid fa-gem"></i>
+                <h4>3. Window Cleaning</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Interior & Exterior</span>
+              </div>
+
+              <div class="service-select-card" data-service="Asphalt Paving" data-base-price="800">
+                <i class="fa-solid fa-road"></i>
+                <h4>4. Asphalt Paving</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Patches & Resurfacing</span>
+              </div>
+
+              <div class="service-select-card" data-service="Line Painting" data-base-price="350">
+                <i class="fa-solid fa-paint-roller"></i>
+                <h4>5. Line Painting</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Stall & Safety Marking</span>
+              </div>
+
+              <div class="service-select-card" data-service="Carpet Cleaning" data-base-price="280">
+                <i class="fa-solid fa-rug"></i>
+                <h4>6. Carpet Cleaning</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Steam Extraction</span>
+              </div>
+
+              <div class="service-select-card" data-service="Pressure Wash" data-base-price="320">
+                <i class="fa-solid fa-shower"></i>
+                <h4>7. Pressure Wash</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Concrete & Siding</span>
+              </div>
+            </div>
+
+            <input type="hidden" id="selectedServicesInput" name="selected_services">
+
+            <!-- Live Estimator Box -->
+            <div style="background: var(--bg-light); border: 1px dashed var(--accent); padding: 1rem 1.5rem; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+              <div>
+                <strong style="color: var(--primary);">Estimated Budget Range:</strong>
+                <span id="estimatedCostDisplay" style="color: var(--accent-hover); font-weight: 800; font-size: 1.1rem; margin-left: 0.5rem;">$0.00 (Select services above)</span>
+              </div>
+              <small style="color: var(--text-muted);">*Final formal quote provided after site consultation</small>
+            </div>
+          </div>
+
+          <!-- Step 2: Site Specifications -->
+          <div style="margin-bottom: 2.5rem;">
+            <h3 style="font-size: 1.35rem; margin-bottom: 1rem; color: var(--primary);">Step 2: Property & Site Specifications</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="propertyType">Property Type *</label>
+                <select class="form-control" id="propertyType" required>
+                  <option value="">Select Property Category...</option>
+                  <option value="Commercial Office Building">Commercial Office Building</option>
+                  <option value="Strata Residential / Condo Complex">Strata Residential / Condo Complex</option>
+                  <option value="Industrial / Warehouse Facility">Industrial / Warehouse Facility</option>
+                  <option value="Retail Plaza / Shopping Centre">Retail Plaza / Shopping Centre</option>
+                  <option value="Educational / Institutional">Educational / Institutional</option>
+                  <option value="Residential Property">Residential Property</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="approxSize">Approximate Size / Area</label>
+                <input type="text" class="form-control" id="approxSize" placeholder="e.g. 15,000 sq ft or 50 parking stalls">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="cityLocation">City / Service Location *</label>
+                <select class="form-control" id="cityLocation" required>
+                  <option value="">Select City in BC...</option>
+                  <option value="Vancouver">Vancouver</option>
+                  <option value="Coquitlam">Coquitlam</option>
+                  <option value="Burnaby">Burnaby</option>
+                  <option value="Surrey">Surrey</option>
+                  <option value="Langley">Langley</option>
+                  <option value="Richmond">Richmond</option>
+                  <option value="Port Moody / Coquitlam">Port Moody / Anmore</option>
+                  <option value="Abbotsford / Fraser Valley">Abbotsford / Fraser Valley</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="frequency">Service Frequency</label>
+                <select class="form-control" id="frequency">
+                  <option value="One-Time Service Project">One-Time Service Project</option>
+                  <option value="Recurring Maintenance Contract">Recurring Maintenance Contract</option>
+                  <option value="Annual Preventative Care Package">Annual Preventative Care Package</option>
+                  <option value="Emergency Request">Emergency Request</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Contact Details -->
+          <div style="margin-bottom: 2.5rem;">
+            <h3 style="font-size: 1.35rem; margin-bottom: 1rem; color: var(--primary);">Step 3: Contact Information</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fullName">Full Name *</label>
+                <input type="text" class="form-control" id="fullName" placeholder="e.g. Sarah Jenkins" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="companyName">Company / Strata Name</label>
+                <input type="text" class="form-control" id="companyName" placeholder="e.g. Pacific Ridge Strata VR104">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="emailAddress">Email Address *</label>
+                <input type="email" class="form-control" id="emailAddress" placeholder="s.jenkins@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="phoneNumber">Phone Number *</label>
+                <input type="tel" class="form-control" id="phoneNumber" placeholder="(604) 555-0199" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="projectNotes">Additional Project Details / Notes</label>
+              <textarea class="form-control" id="projectNotes" placeholder="Describe any specific site conditions, timelines, or access instructions..."></textarea>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+              <i class="fa-solid fa-paper-plane"></i> Submit Quote Request
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon"><i class="fa-solid fa-city"></i></div>
+            <div class="brand-text">
+              <div class="brand-title">MINNEKHADA <span>FACILITIES</span></div>
+              <div class="brand-subtitle">CONSULTING & SERVICES</div>
+            </div>
+          </a>
+          <p>Providing professional, dependable facility advisory and multi-trade property maintenance across British Columbia.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="quote.html">Request Quote</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>7 Core Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#duct-cleaning">Duct Cleaning</a></li>
+            <li><a href="services.html#janitorial-cleaning">Janitorial Cleaning</a></li>
+            <li><a href="services.html#window-cleaning">Window Cleaning</a></li>
+            <li><a href="services.html#asphalt-paving">Asphalt Paving</a></li>
+            <li><a href="services.html#line-painting">Line Painting</a></li>
+            <li><a href="services.html#carpet-cleaning">Carpet Cleaning</a></li>
+            <li><a href="services.html#pressure-wash">Pressure Wash</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li><i class="fa-solid fa-phone" style="color: var(--accent);"></i> (604) 555-6466</li>
+            <li><i class="fa-solid fa-envelope" style="color: var(--accent);"></i> info@minnekhada.ca</li>
+            <li><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> Lower Mainland, BC</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Minnekhada Facilities Consulting. All Rights Reserved.</div>
+        <div>WorkSafeBC Certified & Insured</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
